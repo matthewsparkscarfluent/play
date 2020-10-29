@@ -28,6 +28,7 @@ main {
 .top {
     grid-column: auto / span 6;
     @include grid;
+    background: $color-5;
 }
 
 .vdp-slider {
