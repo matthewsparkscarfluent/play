@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&display=swap');
+
+
+// box-sizing for flexbox
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// colors
+
+$color-1: #000;
+$color-2: #fff;
+$color-3: #2c74d8;
+$color-4: #293e59;
+$color-5: #f0f0f0;
+$color-6: #dceeff;
+
+// fonts
+
+$plex: 'IBM Plex Sans', sans-serif;
+$plex-condensed: 'IBM Plex Sans Condensed', sans-serif;
+
+// dat grid
+
+@mixin grid {
+	display: grid;
+	grid-template-columns: repeat(24, 1fr);
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+	@content;
+}
+
+@mixin input-icon($icon-uri) {
+	background: url($icon-uri) no-repeat left 10px center !important;
+	background-size: 24px !important;
+}
+
+// media queries
+
+$phone-min:         421px;
+$phone-wide-min:    569px;
+$tablet-min:        768px;
+$tablet-wide-min:   991px;
+$desktop-sm-min:   1025px;
+$desktop-min:      1241px;
+$desktop-wide-min: 1441px;
+
+// Min Width
+
+@mixin phone-min {
+	@media (min-width: $phone-min) {
+		@content;
+	}
+}
+
+@mixin phone-wide-min {
+	@media (min-width: $phone-wide-min) {
+		@content;
+	}
+}
+
+@mixin tablet-min {
+	@media (min-width: $tablet-min) {
+		@content;
+	}
+}
+
+@mixin tablet-wide-min {
+	@media (min-width: $tablet-wide-min) {
+		@content;
+	}
+}
+
+@mixin desktop-sm-min {
+	@media (min-width: $desktop-sm-min) {
+		@content;
+	}
+}
+
+@mixin desktop-min {
+	@media (min-width: $desktop-min) {
+		@content;
+	}
+}
+
+@mixin desktop-wide-min {
+	@media (min-width: $desktop-wide-min) {
+		@content;
+	}
+}
