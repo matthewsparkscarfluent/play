@@ -9,3 +9,29 @@ main {
    
 }
 
+.section-label {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-family: $plex;
+    font-weight: 700;
+    margin: 0;
+}
+
+.btn {
+    padding: 20px 40px;
+    font-family: $plex;
+    text-transform: uppercase;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $color-3;
+    color: $color-2;
+    text-decoration: none;
+
+    &--secondary {
+        background: $color-4;
+    }
+}
+
