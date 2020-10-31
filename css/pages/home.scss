@@ -5,37 +5,55 @@
 @import "base";
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 450px;
+    @include grid;
     grid-gap: 0;
 }
 
 .heading {
-    grid-column: auto / span 6;
+    grid-column: auto / span 24;
     background: $color-5;
     padding: 30px 40px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.18);
+    z-index: 1;
 
     &__headline {
         font-family: $plex-condensed;
         font-weight: 500;
-        font-size: 1.75rem;
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    &__price {
+        font-family: $plex-condensed;
+        font-weight: 500;
+        font-size: 1.5rem;
         margin: 0;
     }
 }
 
-.top {
-    grid-column: auto / span 6;
+.vdp-top {
+    grid-column: auto / span 24;
     @include grid;
-    background: $color-5;
+    background: $color-2;
 }
 
 .vdp-slider {
-    grid-column: auto / span 14;
-    grid-row: 1 / span 2;
+    grid-column: auto / span 15;
+    grid-row: 1 / span 10;
+
+    &__top-slider-wrapper {
+        position: relative;
+    }
 
     &__top-slider {
+
+        .flickity-viewport {
+            border-bottom-right-radius: 20px;
+            overflow: hidden;
+        }
 
         .cell {
             width: 100%;
@@ -57,9 +75,38 @@ main {
 
     }
 
+    &__photo-count {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        background: rgba(0,0,0,0.7);
+
+        &-icon {
+            width: 16px;
+            height: 16px;
+
+            .st0 {
+                fill: $color-2;
+            }
+        }
+
+        &-label {
+            color: $color-2;
+            font-family: $plex;
+            font-size: 1rem;
+            padding: 0 10px;
+        }
+    }
+
     &__bottom-slider {
         max-height: 200px;
-        background: $color-5;
         padding: 40px 80px;
 
         .cell {
@@ -79,48 +126,12 @@ main {
     }
 }
 
-.vdp-mileage {
-    grid-column: auto / span 10;
-    grid-row: 1 / span 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-
-    &__detail {
-        display: flex;
-        align-items: center;
-        border: solid 1px darken($color-5, 10%);
-        border-radius: 10px;
-        padding: 5px 10px;
-
-        img {
-            width: 32px;
-            height: 32px;
-        }
-
-        p {
-            margin: 0;
-            padding-left: 10px;
-            font-family: $plex;
-            font-size: 1.2rem;
-            font-weight: 500;
-        }
-    }
-
-    &__label {
-        padding-left: 10px;
-    }
-}
-
 .vdp-highlights {
-    grid-column: auto / span 10;
-    grid-row: 2 / span 1;
-    padding: 0 40px;
+    grid-column: auto / span 9;
+    grid-row: 1 / span 1;
+    padding: 40px;
 
     &__wrapper {
-        background: $color-5;
-        padding: 40px 40px 20px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -143,11 +154,17 @@ main {
         p {
             font-family: $plex-condensed;
             font-weight: 700;
+            color: $color-4;
+            font-size: 1.1rem;
         }
+    }
 
-        img {
-            width: 32px;
-            height: 32px;
+    &__icon {
+        width: 32px;
+        height: 32px;
+
+        .st0 {
+            fill: $color-6;
         }
     }
 
@@ -159,15 +176,23 @@ main {
     }
 }
 
+.vdp-breakdown {
+    grid-column: auto / span 24;
+    @include grid;
+    padding: 80px;
+    background: $color-5;
+}
+
 .vdp-pricing {
-    grid-column: 6 / span 1;
-    grid-row: 7 / span 3;
+    grid-column: auto / span 12;
     padding: 0 40px;
 
     &__wrapper {
-        padding: 40px 40px 20px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
+        background: $color-2;
+        border-radius: 20px;
     }
 
     &__items {
@@ -180,8 +205,8 @@ main {
         justify-content: space-between;
         border-bottom: 1px solid darken($color-5, 10%);
 
-        &:last-of-type {
-            border: none;
+        &:first-of-type {
+            border-top: 1px solid darken($color-5, 10%);
         }
     }
 
@@ -206,22 +231,40 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 20px 0 5px;
 
         p {
             font-family: $plex;
             font-size: 1.5rem;
             font-weight: 500;
+            margin: 0;
         }
     }
 }
 
 .vdp-cta {
-    grid-column: 6 / span 1;
-    grid-row: 10 / span 2;
+    grid-column: auto / span 12;
     padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+        padding: 20px 0;
+        
+        p {
+            margin: 0;
+            color: $color-4;
+            font-family: $plex;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
 
     .btn {
         margin-bottom: 20px;
+        min-width: 80%;
     }
 }
 
