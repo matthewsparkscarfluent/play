@@ -339,14 +339,11 @@ main {
         @include grid;
         grid-gap: 0;
         overflow: hidden;
-        height: 0;
-        transform: scale(1,0);
-        transition: transform .3s;
-        transform-origin: top;
+        max-height: 0;
+        transition: max-height .3s;
 
         &.features-display {
-            height: auto;
-            transform: scale(1,1);
+            max-height: 100vh;
         }
 
     }
