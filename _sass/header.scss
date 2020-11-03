@@ -1,10 +1,27 @@
 .header {
     display: flex;
     align-items: center;
-    padding: 20px 40px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+
+    @include tablet-min {
+        padding: 20px 40px;
+    }
 
     &__logo {
-        flex: 0 0 15%;
+        flex: 0 0 50%;
+        min-width: 150px;
+        max-width: 150px;
+
+        @include phone-min {
+            min-width: 175px;
+            max-width: 175px;
+        }
+
+        @include phone-wide-min {
+            flex: 0 0 15%;
+            max-width: 200px;
+        }
 
         img {
             display: block;
@@ -21,33 +38,58 @@
     }
 
     &__cta {
-        padding: 0 20px;
 
         &--phone {
+            flex: 0 0 auto;
+            margin-left: auto;
+            text-align: right;
+            padding: 0;
+
+            @include phone-wide-min {
+                text-align: left;
+                padding: 0 0 0 20px;
+            }
             
             a {
                 text-decoration: none;
                 color: $color-1;
                 font-family: $plex;
-                font-size: 1.3rem;
+                font-size: 1rem;
                 font-weight: 500;
+                
+                @include tablet-wide-min {
+                    font-size: 1.3rem; 
+                }
             }
         }
     
 
     &--toggle {
+        flex: 0 0 100%;
+        padding: 15px 0 0;
+
+        @include phone-wide-min {
+            flex: 0 0 auto;
+            padding: 0 0 0 20px;
+        }
 
         // Toggle
 
         .toggle {
             overflow: hidden;
             position: relative;
-            display: inline-block;
-            width: 200px;
+            display: block;
+            width: 150px;
             background-color: $color-5;
             border: solid 1px darken($color-5, 10%);
             cursor: pointer;
             border-radius: 10px;
+            margin: 0 auto;
+            
+            @include phone-wide-min {
+                width: 200px;
+                margin: 0;
+            }
         }
         .toggle input {
             position: absolute;
@@ -62,13 +104,16 @@
             z-index: 2;
             font-family: $plex-condensed;
             font-weight: 700;
-            font-size: .8rem;
+            font-size: .7rem;
             letter-spacing: 1px;
-            
             -webkit-transition: left 200ms ease-out;
                 -moz-transition: left 200ms ease-out;
                 -o-transition: left 200ms ease-out;
                     transition: left 200ms ease-out;
+
+            @include phone-wide-min {
+                font-size: .8rem;
+            }
         }
         .toggle :checked + span {
             left: 50%;
@@ -105,13 +150,17 @@
             font-family: $plex-condensed;
             color: $color-1; 
             font-weight: 700;
-            font-size: .8rem;
+            font-size: .7rem;
             letter-spacing: 1px;
 
             &:last-of-type {
                 left: auto;
                 right: 0;
                 
+            }
+
+            @include phone-wide-min {
+                font-size: .8rem;
             }
         }
 
