@@ -138,6 +138,10 @@ main {
             font-size: 1rem;
             padding: 0 10px;
         }
+
+        &-image {
+            display: none;
+        }
     }
 
     &__bottom-slider {
@@ -217,9 +221,11 @@ main {
             font-weight: 700;
             color: $color-4;
             font-size: .9rem;
+            margin: 15px 0;
 
             @include tablet-wide-min {
                 font-size: 1.1rem;
+                margin: 30px 0;
             }
         }
     }
