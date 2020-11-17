@@ -10,11 +10,14 @@
     border-radius: 20px;
     overflow: hidden;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 100%;
 
     @include phone-wide-min {
         grid-column: auto / span 12;
         margin: 0;
-        max-width: 100%;
     }
 
     @include desktop-sm-min {
@@ -31,6 +34,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    flex: 1;
 
     @include tablet-wide-min {
         padding: 20px;
@@ -55,19 +59,23 @@
 &__feature {
     font-family: $plex;
     padding: 0 20px 0 0;
+    margin: 0 0 10px;
+    font-size: .9rem;
 
     &--price {
         position: relative;
         
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: auto;
-            right: 10px;
-            bottom: 0;
-            width: 1px;
-            background: $color-1;
+        @include desktop-min {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: auto;
+                right: 10px;
+                bottom: 0;
+                width: 1px;
+                background: $color-1;
+            }
         }
     }
 
