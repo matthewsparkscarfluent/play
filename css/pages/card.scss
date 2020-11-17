@@ -1,0 +1,99 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "base";
+
+.vehicle-card {
+    grid-column: auto / span 24;
+    border: solid 1px darken($color-5, 10%);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    @include phone-wide-min {
+        grid-column: auto / span 12;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    @include desktop-sm-min {
+        grid-column: auto / span 6;
+    }
+
+
+&__card-image {
+    height: 0;
+    padding-top: 56.25%;
+}
+
+&__card-text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet-wide-min {
+        padding: 20px;
+    }
+}
+
+&__headline {
+    font-family: $plex;
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    font-size: 1rem;
+}
+
+&__features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+&__feature {
+    font-family: $plex;
+    padding: 0 20px 0 0;
+
+    &--price {
+        position: relative;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: auto;
+            right: 10px;
+            bottom: 0;
+            width: 1px;
+            background: $color-1;
+        }
+    }
+
+    &--mileage {
+        position: relative;
+        padding: 0 20px 0 30px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: url(/img/miles.svg);
+        }
+    }
+}
+
+&__cta {
+    margin: auto 0 0;
+
+    .btn {
+        min-width: 100%;
+    }
+}
+
+}

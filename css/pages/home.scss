@@ -575,8 +575,6 @@ main {
 
     &__cards {
         @include grid;
-        grid-column-gap: 0;
-        grid-row-gap: 20px;
         
         @include tablet-min {
             grid-gap: 10px;
@@ -584,79 +582,6 @@ main {
 
         @include tablet-wide-min {
             grid-gap: 20px; 
-        }
-    }
-
-    &__card {
-        grid-column: auto / span 24;
-        border: solid 1px darken($color-5, 10%);
-        border-radius: 20px;
-        overflow: hidden;
-        max-width: 300px;
-        margin: 0 auto;
-
-        @include tablet-min {
-            grid-column: auto / span 8;
-            margin: 0;
-            max-width: 100%;
-        }
-    }
-
-    &__card-image {
-        height: 0;
-        padding-top: 56.25%;
-    }
-
-    &__card-text {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-
-        @include tablet-wide-min {
-            padding: 20px;
-        }
-    }
-
-    &__headline {
-        font-family: $plex;
-        font-weight: 700;
-        text-align: center;
-        margin: 0;
-        font-size: 1.1rem;
-    }
-
-    &__features {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 20px;
-        justify-content: center;
-    }
-
-    &__feature {
-        font-family: $plex;
-        padding: 0 20px;
-
-        &--mileage {
-            position: relative;
-            padding-left: 30px;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-                width: 24px;
-                height: 24px;
-                background: url(/img/miles.svg);
-            }
-        }
-    }
-
-    &__cta {
-        .btn {
-            min-width: 100%;
         }
     }
 }

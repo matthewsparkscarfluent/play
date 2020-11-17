@@ -5,6 +5,7 @@ flickity: true
 lightbox: true
 page_class:
 - class: home
+- class: card
 custom_js: vdp
 ---
 
@@ -390,59 +391,25 @@ custom_js: vdp
         Vehiule Similare
     </h3>
     <div class="vdp-similar-vehicles__cards">
-        <div class="vdp-similar-vehicles__card">
-            <div class="vdp-similar-vehicles__card-image" style="background: url('img/car1.png') center center/cover no-repeat"></div>
-            <div class="vdp-similar-vehicles__card-text">
-                <h3 class="vdp-similar-vehicles__headline">2019 BMW M4 Competition</h3>
-                <div class="vdp-similar-vehicles__features">
-                    <div class="vdp-similar-vehicles__feature vdp-similar-vehicles__feature--price">
-                        $62,500
+        {% for card in site.data.vdp.cards %}
+        <div class="vehicle-card">
+            <div class="vehicle-card__card-image" style="background: url('{{ card.image }}') center center/cover no-repeat"></div>
+            <div class="vehicle-card__card-text">
+                <h3 class="vehicle-card__headline">{{ card.headline }}</h3>
+                <div class="vehicle-card__features">
+                    <div class="vehicle-card__feature vehicle-card__feature--price">
+                        {{ card.price }}
                     </div>
-                    <div class="vdp-similar-vehicles__feature vdp-similar-vehicles__feature--mileage">
-                        48,245 Miles
-                    </div>
-                </div>
-                <div class="vdp-similar-vehicles__cta">
-                    <div class="btn btn--secondary">Alcanzar Si</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="vdp-similar-vehicles__card">
-            <div class="vdp-similar-vehicles__card-image" style="background: url('img/car1.png') center center/cover no-repeat"></div>
-            <div class="vdp-similar-vehicles__card-text">
-                <h3 class="vdp-similar-vehicles__headline">2019 BMW M4 Competition</h3>
-                <div class="vdp-similar-vehicles__features">
-                    <div class="vdp-similar-vehicles__feature vdp-similar-vehicles__feature--price">
-                        $62,500
-                    </div>
-                    <div class="vdp-similar-vehicles__feature vdp-similar-vehicles__feature--mileage">
-                        48,245 Miles
+                    <div class="vehicle-card__feature vehicle-card__feature--mileage">
+                        {{ card.mileage }}
                     </div>
                 </div>
-                <div class="vdp-similar-vehicles__cta">
-                    <div class="btn btn--secondary">Alcanzar Si</div>
+                <div class="vehicle-card__cta">
+                    <a href="#" class="btn btn--secondary">{{ card.cta }}</a>
                 </div>
             </div>
         </div>
-
-        <div class="vdp-similar-vehicles__card">
-            <div class="vdp-similar-vehicles__card-image" style="background: url('img/car1.png') center center/cover no-repeat"></div>
-            <div class="vdp-similar-vehicles__card-text">
-                <h3 class="vdp-similar-vehicles__headline">2019 BMW M4 Competition</h3>
-                <div class="vdp-similar-vehicles__features">
-                    <div class="vdp-similar-vehicles__feature vdp-similar-vehicles__feature--price">
-                        $62,500
-                    </div>
-                    <div class="vdp-similar-vehicles__feature vdp-similar-vehicles__feature--mileage">
-                        48,245 Miles
-                    </div>
-                </div>
-                <div class="vdp-similar-vehicles__cta">
-                    <div class="btn btn--secondary">Alcanzar Si</div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 
