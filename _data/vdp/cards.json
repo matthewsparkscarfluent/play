@@ -8,6 +8,12 @@
     },
     {
         "image": "img/car1.png",
+        "flag": [
+            {
+                "type": "new-inventory",
+                "text": "Nuevo Invo"
+            }
+        ],
         "headline": "2019 BMW M4 Competition",
         "price": "$62,500",
         "mileage": "48,245 Miles",

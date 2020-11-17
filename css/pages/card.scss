@@ -8,12 +8,12 @@
     grid-column: auto / span 24;
     border: solid 1px darken($color-5, 10%);
     border-radius: 20px;
-    overflow: hidden;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     width: 100%;
+    position: relative;
 
     @include phone-wide-min {
         grid-column: auto / span 12;
@@ -24,6 +24,35 @@
         grid-column: auto / span 6;
     }
 
+&__flag {
+    padding: 5px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-family: $plex-condensed;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-2;
+    font-size: .8rem;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    min-width: 100px;
+
+    &--new-inventory {
+        background: $color-7;
+    }
+
+    &--low-mileage {
+        background: lighten($color-1, 30%);
+    }
+}
+
+&__card-image-container {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
 
 &__card-image {
     height: 0;
@@ -81,7 +110,7 @@
 
     &--mileage {
         position: relative;
-        padding: 0 20px 0 30px;
+        padding: 0 20px;
 
         &::before {
             content: '';
@@ -89,8 +118,8 @@
             top: 50%;
             left: 0;
             transform: translateY(-50%);
-            width: 24px;
-            height: 24px;
+            width: 16px;
+            height: 16px;
             background: url(/img/miles.svg);
         }
     }

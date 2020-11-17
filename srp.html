@@ -1,0 +1,113 @@
+---
+layout: default
+title: CarFluent
+lightbox: true
+page_class:
+- class: srp
+- class: card
+custom_js: srp
+---
+
+<div class="srp">
+    <div class="srp__search">
+        <div class="srp__search-field">
+            <input type="text" placeholder="Search For Your Vehicle">
+        </div>
+        <div class="srp__filters-container">
+            <button data-fancybox class="btn btn--white btn--filter" href="#filters">Filters</button>
+        </div>
+    </div>
+    <div class="srp__cards">
+        {% for card in site.data.srp.cards %}
+            <div class="vehicle-card">
+                <div class="vehicle-card__card-image-container">
+                    <div class="vehicle-card__card-image" style="background: url('{{ card.image }}') center center/cover no-repeat"></div>
+                </div>
+                    {% for flag in card.flag %}
+                    <div class="vehicle-card__flag vehicle-card__flag--{{flag.type}}">{{ flag.text }}</div>
+                    {% endfor %}
+                <div class="vehicle-card__card-text">
+                    <h3 class="vehicle-card__headline">{{ card.headline }}</h3>
+                    <div class="vehicle-card__features">
+                        <div class="vehicle-card__feature vehicle-card__feature--price">
+                            {{ card.price }}
+                        </div>
+                        <div class="vehicle-card__feature vehicle-card__feature--mileage">
+                            {{ card.mileage }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+    <div id="filters" class="srp__filters">
+        <h2>Vehicle Search Filters</h2>
+        <div class="srp__filters-items">
+            <h3>Make</h3>
+            <div class="srp__filters-item-container">
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">Audi</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">Alfa Romeo</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">Buick</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">BMW</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">Chevrolet</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">Chrysler</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">Dodge</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">Ford</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">Infiniti</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">Jeep</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="srp__filters-items">
+            <h3>Model</h3>
+            <div class="srp__filters-item-container">
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">320i</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">X2 28i Sport</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">428 xi</span>
+                </label>
+                <label class="srp__filters-item">
+                    <input type="checkbox" name="options">
+                    <span class="srp__filters-item-pill">M4</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

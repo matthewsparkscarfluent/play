@@ -393,7 +393,12 @@ custom_js: vdp
     <div class="vdp-similar-vehicles__cards">
         {% for card in site.data.vdp.cards %}
         <div class="vehicle-card">
-            <div class="vehicle-card__card-image" style="background: url('{{ card.image }}') center center/cover no-repeat"></div>
+            <div class="vehicle-card__card-image-container">
+                <div class="vehicle-card__card-image" style="background: url('{{ card.image }}') center center/cover no-repeat"></div>
+            </div>
+            {% for flag in card.flag %}
+                <div class="vehicle-card__flag vehicle-card__flag--{{flag.type}}">{{ flag.text }}</div>
+            {% endfor %}
             <div class="vehicle-card__card-text">
                 <h3 class="vehicle-card__headline">{{ card.headline }}</h3>
                 <div class="vehicle-card__features">

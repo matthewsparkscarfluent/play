@@ -1,0 +1,147 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "base";
+
+main {
+    @include grid;
+}
+
+.srp {
+    grid-column: auto / span 24;
+
+    &__search {
+        padding: 40px 80px;
+        background: $color-5;
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    &__search-field {
+        flex: 0 0 100%;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            width: 32px;
+            height: 32px;
+            transform: translateY(-50%);
+            background: url('/img/icon-search.svg') center center/contain no-repeat;
+            opacity: .4;
+        }
+
+        input {
+            width: 100%;
+            padding: 20px 64px;
+            font-size: 1.1rem;
+            font-family: $plex;
+        }
+
+    }
+
+    &__filters-container {
+        padding: 10px 0;
+        
+        .btn--filter {
+            position: relative;
+            padding-left: 42px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                width: 18px;
+                height: 18px;
+                background: url('/img/icon-filter.svg') center center/contain no-repeat;
+            }
+        }
+    }
+
+    &__cards {
+        @include grid;
+        grid-gap: 20px;
+        padding: 40px;
+
+        @include tablet-min {
+            padding: 80px 40px; 
+        }
+
+        @include tablet-wide-min {
+            padding: 80px;
+        }
+    }
+
+    .vehicle-card {
+
+        &__features {
+            padding: 20px 0 0;
+        }
+    }
+
+    &__filters {
+        padding: 40px;
+        border-radius: 10px;
+        min-width: 80%;
+
+        h2 {
+            font-family: $plex;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 0 40px;
+        }
+
+        .fancybox-close-small {
+            top: 33px;
+            right: 40px;
+        }
+    }
+
+    &__filters-items {
+        padding: 0 0 40px;
+        
+        h3 {
+            font-family: $plex-condensed;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: .9rem;
+        }
+    }
+
+    &__filters-item {
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &:checked + .srp__filters-item-pill {
+                background: $color-3;
+                color: $color-2;
+                border-color: $color-3;
+            }
+        }
+
+        &-pill {
+            border: solid 1px lighten($color-1, 80%);
+            border-radius: 5px;
+            padding: 5px 10px;
+            text-align: center;
+            color: $color-3;
+            font-family: $plex;
+            font-weight: 600;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+}

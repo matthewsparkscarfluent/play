@@ -20,6 +20,7 @@ main {
 .btn {
     padding: 20px 40px;
     font-family: $plex;
+    font-size: 1rem;
     text-transform: uppercase;
     border-radius: 10px;
     display: flex;
@@ -29,9 +30,22 @@ main {
     background: $color-3;
     color: $color-2;
     text-decoration: none;
+    box-shadow: none;
+    border: none;
 
     &--secondary {
         background: $color-4;
+    }
+
+    &--white {
+        background: $color-2;
+        color: $color-3;
+        text-transform: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: .9rem;
+        font-weight: 600;
+        cursor: pointer;
     }
 }
 
