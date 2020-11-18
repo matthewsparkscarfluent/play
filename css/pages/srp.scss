@@ -12,13 +12,17 @@ main {
     grid-column: auto / span 24;
 
     &__search {
-        padding: 40px 80px;
+        padding: 40px;
         background: $color-5;
         display: flex;
         flex-direction: column;
         position: sticky;
         top: 0;
         z-index: 2;
+        
+        @include tablet-wide-min {
+            padding: 40px 80px;
+        }
     }
 
     &__search-field {
@@ -68,11 +72,12 @@ main {
 
     &__cards {
         @include grid;
-        grid-gap: 20px;
+        
         padding: 40px;
 
         @include tablet-min {
-            padding: 80px 40px; 
+            padding: 80px 40px;
+            grid-gap: 20px;
         }
 
         @include tablet-wide-min {
@@ -85,6 +90,10 @@ main {
         &__features {
             padding: 20px 0 0;
         }
+    }
+
+    #filters {
+        display: none;
     }
 
     &__filters {
@@ -116,9 +125,16 @@ main {
         }
     }
 
-    &__filters-item {
+    &__filters-item-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-        input {
+    &__filters-item {
+        margin: 5px 0;
+
+        [type="checkbox"] {
             position: absolute;
             opacity: 0;
             cursor: pointer;
@@ -132,6 +148,24 @@ main {
             }
         }
 
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            outline: 0;
+            box-shadow: none;
+            border: 0 !important;
+            background: transparent;
+            background-image: none;
+            cursor: pointer;
+            font-family: $plex;
+            font-size: .9rem;
+            font-weight: 600;
+            color: $color-3;
+            padding: 5px 32px;
+        }
+
         &-pill {
             border: solid 1px lighten($color-1, 80%);
             border-radius: 5px;
@@ -142,6 +176,35 @@ main {
             font-weight: 600;
             margin-right: 10px;
             cursor: pointer;
+        }
+
+        &-select {
+            border: solid 1px lighten($color-1, 80%);
+            border-radius: 5px;
+            text-align: left;
+            color: $color-3;
+            font-family: $plex;
+            font-weight: 600;
+            margin-right: 10px;
+            display: flex;
+            cursor: pointer;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 8px;
+                // padding: 0 15px;
+                background: $color-2;
+                cursor: pointer;
+                pointer-events: none;
+                transition: .25s all ease;
+                background: url('/img/icon-arrow-down-blue.svg') center center/contain no-repeat;
+            }
         }
     }
 }
