@@ -86,6 +86,8 @@ main {
     }
 
     .vehicle-card {
+        color: $color-1;
+        text-decoration: none;
 
         &__features {
             padding: 20px 0 0;

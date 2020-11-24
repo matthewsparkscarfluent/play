@@ -20,7 +20,7 @@ custom_js: srp
     </div>
     <div class="srp__cards">
         {% for card in site.data.srp.cards %}
-            <div class="vehicle-card">
+            <a href="{{ card.link }}" class="vehicle-card">
                 <div class="vehicle-card__card-image-container">
                     <div class="vehicle-card__card-image" style="background: url('{{ card.image }}') center center/cover no-repeat"></div>
                 </div>
@@ -38,7 +38,7 @@ custom_js: srp
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             {% endfor %}
     </div>
     <div id="filters" class="srp__filters">
