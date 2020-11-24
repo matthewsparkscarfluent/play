@@ -44,6 +44,10 @@
         <link rel="stylesheet" href="{{ "/css/vendor/jquery.fancybox.css" | prepend: site.baseurl }}">
     {% endif %}
 
+    {% if page.ion == true %}
+        <link rel="stylesheet" href="{{ "/css/vendor/ion.rangeSlider.css" | prepend: site.baseurl }}">
+    {% endif %}
+
     {% for class in page.page_class %}
         {% if class.class %}
             <link rel="stylesheet" href="{{ '/css/pages/' | append: class.class | append: '.css' | prepend: site.baseurl }}">

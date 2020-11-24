@@ -123,6 +123,25 @@ main {
             text-transform: uppercase;
             font-size: .9rem;
         }
+
+        &-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        &--double {
+            flex: 0 0 100%;
+            padding: 0 40px 0 0;
+
+            @include phone-wide-min {
+                flex: 0 0 50%;
+            }
+        }
+
+        &--range {
+            padding: 0 40px 60px 0;
+        }
     }
 
     &__filters-item-container {
@@ -146,6 +165,18 @@ main {
                 color: $color-2;
                 border-color: $color-3;
             }
+
+            &:checked + .srp__filters-item-color::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 28px;
+                height: 28px;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                background: url('/img/icon-check.svg') center center/contain no-repeat;
+            }
         }
 
         select {
@@ -163,7 +194,7 @@ main {
             font-size: .9rem;
             font-weight: 600;
             color: $color-3;
-            padding: 5px 32px;
+            padding: 5px 32px 5px 24px;
         }
 
         &-pill {
@@ -176,6 +207,16 @@ main {
             font-weight: 600;
             margin-right: 10px;
             cursor: pointer;
+        }
+
+        &-color {
+            border: solid 1px lighten($color-1, 80%);
+            border-radius: 5px;
+            width: 48px;
+            height: 48px;
+            margin-right: 10px;
+            cursor: pointer;
+            position: relative;
         }
 
         &-select {
@@ -206,5 +247,40 @@ main {
                 background: url('/img/icon-arrow-down-blue.svg') center center/contain no-repeat;
             }
         }
+
+        .irs--flat, .irs--flat.irs-with-grid {
+            width: 100%;
+        }
+
+        .irs--flat .irs-bar, .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+            background-color: $color-3;
+        }
+
+        .irs--flat .irs-from::before, .irs--flat .irs-to::before, .irs--flat .irs-single::before {
+            border-top-color: $color-3;
+            bottom: unset;
+            top: -6px;
+            transform: rotate(180deg);
+        }
+
+        .irs--flat .irs-handle > i:first-child {
+            background-color: $color-3;
+        }
+
+        .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+            font-size: 1rem;
+            font-family: $plex;
+            font-weight: 500;
+            top: 450%;
+        }
+    }
+
+    &__filters-footer {
+        padding: 40px 0;
+        border-top: solid 1px lighten($color-1, 80%);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
     }
 }

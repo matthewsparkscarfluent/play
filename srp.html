@@ -2,6 +2,7 @@
 layout: default
 title: CarFluent
 lightbox: true
+ion: true
 page_class:
 - class: srp
 - class: card
@@ -137,5 +138,78 @@ custom_js: srp
                 </div>
             </label>
         </div>
+
+        <div class="srp__filters-items-container">
+
+            <div class="srp__filters-items srp__filters-items--double srp__filters-items--range">
+                <h3>Price Range</h3>
+                <label class="srp__filters-item srp__filters-item--double">
+                    <div class="srp__filters-item-container">
+                        
+                        <input type="text" class="js-range-slider" name="my_range" value=""
+                        data-type="double"
+                        data-min="5000"
+                        data-max="100000"
+                        data-from="20000"
+                        data-to="40000"
+                        data-grid="false"
+                        data-prefix="$"
+                        data-hide-min-max="true"
+                        data-prettify-separator=","
+                    />
+    
+                    </div>
+                </label>
+            </div>
+    
+            <div class="srp__filters-items srp__filters-items--double srp__filters-items--range">
+                <h3>Mileage Range</h3>
+                <label class="srp__filters-item srp__filters-item--double">
+                    <div class="srp__filters-item-container">
+                        
+                        <input type="text" class="js-range-slider" name="my_range" value=""
+                        data-type="double"
+                        data-min="1000"
+                        data-max="100000"
+                        data-from="10000"
+                        data-to="40000"
+                        data-grid="false"
+                        data-hide-min-max="true"
+                        data-prettify-separator=","
+                    />
+    
+                    </div>
+                </label>
+            </div>
+
+            <div class="srp__filters-items">
+                <h3>Color</h3>
+                <div class="srp__filters-item-container">
+                    <label class="srp__filters-item">
+                        <input type="checkbox" name="options">
+                        <div class="srp__filters-item-color" style="background-color: #2e5266;"></div>
+                    </label>
+                    <label class="srp__filters-item">
+                        <input type="checkbox" name="options">
+                        <div class="srp__filters-item-color" style="background-color: #6e8898;"></div>
+                    </label>
+                    <label class="srp__filters-item">
+                        <input type="checkbox" name="options">
+                        <div class="srp__filters-item-color" style="background-color: #9fb1bc;"></div>
+                    </label>
+                    <label class="srp__filters-item">
+                        <input type="checkbox" name="options">
+                        <div class="srp__filters-item-color" style="background-color: #d3d0cb;"></div>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="srp__filters-footer">
+            <a href="#" class="btn">Apply Filters</a>
+            <a href="#" class="btn btn--white">Clear Filters</a>
+        </div>
+
     </div>
 </div>

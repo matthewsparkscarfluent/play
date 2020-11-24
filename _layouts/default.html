@@ -18,6 +18,11 @@
         <script src="{{ "/js/jquery.fancybox.min.js" | prepend: site.baseurl }}"></script>
     {% endif %}
 
+    {% if page.ion == true %}
+        <script src="{{ "/js/ion.rangeSlider.min.js" | prepend: site.baseurl }}"></script>
+        <script>$(".js-range-slider").ionRangeSlider();</script>
+    {% endif %}
+
     {% if page.custom_js %}
     {% for js_file in page.custom_js %}
     <script src='{{ base }}/js/{{ js_file }}.js' type="text/javascript"></script>
