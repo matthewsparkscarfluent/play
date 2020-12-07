@@ -586,3 +586,141 @@ main {
     }
 }
 
+.vdp-contact {
+    background: $color-5;
+    grid-column: auto / span 24;
+
+    &__wrapper {
+        @include grid;
+        grid-gap: 0;
+    }
+
+    &__map {
+        background: $color-6;
+        grid-column: auto / span 24;
+        min-height: 400px;
+
+        @include tablet-wide-min {
+            grid-column: auto / span 10;
+        }
+    }
+
+    &__text-wrapper {
+        padding: 40px;
+        grid-column: auto / span 24;
+        @include grid;
+
+        @include tablet-min {
+            padding: 80px 40px;
+        }
+
+        @include tablet-wide-min {
+            padding: 80px 80px;
+            grid-column: auto / span 14;
+        }
+    }
+
+    &__address {
+        grid-column: auto / span 24;
+        order: 1;
+        padding: 0 0 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include phone-wide-min {
+            grid-column: 1 / span 12;
+            grid-row: 1 / span 1;
+            align-items: flex-start;
+        }
+
+        h2, p {
+            font-family: $plex;
+        }
+
+        h2 {
+            color: $color-4;
+        }
+
+        .btn {
+            max-width: 300px;
+            min-width: 250px;
+            margin-top: 40px;
+        }
+    }
+
+    &__social {
+        grid-column: auto / span 24;
+        order: 3;
+
+        @include phone-wide-min {
+            grid-column: 1 / span 12;
+            grid-row: 2 / span 1;
+        }
+    }
+
+    &__social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include phone-wide-min {
+            justify-content: flex-start;
+        }
+    }
+
+    &__social-label {
+        text-align: center;
+
+        @include phone-wide-min {
+            text-align: left;
+        }
+    }
+
+    &__social-icon {
+        flex: 0 0 auto;
+        padding: 20px 40px;
+
+        @include phone-wide-min {
+            padding: 20px 40px 0 0;
+        }
+        
+        svg {
+            max-width: 32px;
+            height: auto;
+
+            @include tablet-wide-min {
+                max-width: 48px;
+            }
+        }
+    }
+
+    &__phones {
+        grid-column: auto / span 24;
+        order: 2;
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include phone-wide-min {
+            grid-column: 13 / span 12;
+            grid-row: 1 / span 2;
+            align-items: flex-start;
+        }
+    }
+
+    &__phone {
+        padding: 0 20px 40px;
+
+        a {
+            font-family: $plex;
+            text-decoration: none;
+            color: $color-4;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+    
+}
+
