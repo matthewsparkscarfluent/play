@@ -12,13 +12,17 @@ main {
     grid-column: auto / span 24;
 
     &__search {
-        padding: 40px;
+        padding: 20px;
         background: $color-5;
         display: flex;
-        flex-direction: column;
         position: sticky;
         top: 0;
         z-index: 2;
+
+        @include phone-wide-min {
+            flex-direction: column;
+            padding: 40px;
+        }
         
         @include tablet-wide-min {
             padding: 40px 80px;
@@ -26,8 +30,12 @@ main {
     }
 
     &__search-field {
-        flex: 0 0 100%;
+        flex: 0 0 70%;
         position: relative;
+
+        @include phone-wide-min {
+            flex: 0 0 100%;
+        }
 
         &::after {
             content: '';
@@ -46,16 +54,36 @@ main {
             padding: 20px 64px;
             font-size: 1.1rem;
             font-family: $plex;
+            border: none;
+            border-right: 1px solid $color-5;
+
+            @include phone-wide-min {
+                border-right: 0;
+            }
         }
 
     }
 
     &__filters-container {
-        padding: 10px 0;
+        flex: 0 0 30%;
+
+        @include phone-wide-min {
+            flex: 0 0 100%;
+            padding: 10px 0;
+        }
         
         .btn--filter {
             position: relative;
             padding-left: 42px;
+            height: 100%;
+            width: 100%;
+            border-radius: 0;
+
+            @include phone-wide-min {
+                height: auto;
+                width: auto;
+                border-radius: inherit;
+            }
 
             &::after {
                 content: '';
