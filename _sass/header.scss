@@ -1,7 +1,7 @@
 .header {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 0 0;
     flex-wrap: wrap;
 
     @include tablet-min {
@@ -12,6 +12,7 @@
         flex: 0 0 50%;
         min-width: 150px;
         max-width: 150px;
+        padding: 0 15px;
 
         @include phone-min {
             min-width: 175px;
@@ -21,6 +22,7 @@
         @include phone-wide-min {
             flex: 0 0 15%;
             max-width: 200px;
+            padding: 0;
         }
 
         img {
@@ -43,7 +45,7 @@
             flex: 0 0 auto;
             margin-left: auto;
             text-align: right;
-            padding: 0;
+            padding: 0 15px;
 
             @include phone-wide-min {
                 text-align: left;
@@ -79,16 +81,16 @@
             overflow: hidden;
             position: relative;
             display: block;
-            width: 150px;
+            width: 100%;
             background-color: $color-5;
             border: solid 1px darken($color-5, 10%);
             cursor: pointer;
-            border-radius: 10px;
             margin: 0 auto;
             
             @include phone-wide-min {
                 width: 200px;
                 margin: 0;
+                border-radius: 10px;
             }
         }
         .toggle input {
