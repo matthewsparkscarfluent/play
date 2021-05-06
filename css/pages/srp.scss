@@ -52,7 +52,7 @@ main {
             width: 100%;
             padding: 20px 64px;
             font-size: 1rem;
-            font-family: $plex;
+            font-family: $cerebri;
             border: none;
             border-right: 1px solid $color-5;
 
@@ -130,8 +130,7 @@ main {
         min-width: 80%;
 
         h2 {
-            font-family: $plex;
-            font-weight: 700;
+            font-family: $cerebri-bold;
             font-size: 1.2rem;
             margin: 0 0 40px;
         }
@@ -146,8 +145,7 @@ main {
         padding: 0 0 40px;
         
         h3 {
-            font-family: $plex-condensed;
-            font-weight: 600;
+            font-family: $cerebri-medium;
             text-transform: uppercase;
             font-size: .9rem;
         }
@@ -218,9 +216,8 @@ main {
             background: transparent;
             background-image: none;
             cursor: pointer;
-            font-family: $plex;
+            font-family: $cerebri-medium;
             font-size: .9rem;
-            font-weight: 600;
             color: $color-3;
             padding: 5px 32px 5px 24px;
         }
@@ -231,8 +228,7 @@ main {
             padding: 5px 10px;
             text-align: center;
             color: $color-3;
-            font-family: $plex;
-            font-weight: 600;
+            font-family: $cerebri-medium;
             margin-right: 10px;
             cursor: pointer;
         }
@@ -252,8 +248,7 @@ main {
             border-radius: 5px;
             text-align: left;
             color: $color-3;
-            font-family: $plex;
-            font-weight: 600;
+            font-family: $cerebri-medium;
             margin-right: 10px;
             display: flex;
             cursor: pointer;
@@ -297,8 +292,7 @@ main {
 
         .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
             font-size: 1rem;
-            font-family: $plex;
-            font-weight: 500;
+            font-family: $cerebri-medium;
             top: 450%;
         }
     }

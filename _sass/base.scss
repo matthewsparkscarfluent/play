@@ -23,8 +23,9 @@ $color-7: #009f16;
 
 // fonts
 
-$plex: 'IBM Plex Sans', sans-serif;
-$plex-condensed: 'IBM Plex Sans Condensed', sans-serif;
+$cerebri: 'cerebrisans-regular', sans-serif;
+$cerebri-medium: 'cerebrisans-medium', sans-serif;
+$cerebri-bold: 'cerebrisans-bold', sans-serif;
 
 // dat grid
 
@@ -93,4 +94,21 @@ $desktop-wide-min: 1441px;
 	@media (min-width: $desktop-wide-min) {
 		@content;
 	}
+}
+
+// Fonts
+
+@font-face {
+	font-family: cerebrisans-regular;
+	src: url(/fonts/cerebrisans-regular.woff);
+}
+
+@font-face {
+	font-family: cerebrisans-medium;
+	src: url(/fonts/cerebrisans-medium.woff);
+}
+
+@font-face {
+	font-family: cerebrisans-bold;
+	src: url(/fonts/cerebrisans-bold.woff);
 }

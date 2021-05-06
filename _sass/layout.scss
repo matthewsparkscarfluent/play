@@ -12,14 +12,13 @@ main {
 .section-label {
     text-transform: uppercase;
     font-size: .8rem;
-    font-family: $plex;
-    font-weight: 700;
+    font-family: $cerebri-bold;
     margin: 0;
 }
 
 .btn {
     padding: 20px 40px;
-    font-family: $plex;
+    font-family: $cerebri-medium;
     font-size: 1rem;
     text-transform: uppercase;
     border-radius: 10px;

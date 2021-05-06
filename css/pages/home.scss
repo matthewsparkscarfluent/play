@@ -27,8 +27,7 @@ main {
     }
 
     &__headline {
-        font-family: $plex-condensed;
-        font-weight: 500;
+        font-family: $cerebri-medium;
         font-size: 1.1rem;
         margin: 0;
         text-align: center;
@@ -44,8 +43,7 @@ main {
     }
 
     &__price {
-        font-family: $plex-condensed;
-        font-weight: 500;
+        font-family: $cerebri-medium;
         font-size: 1.5rem;
         margin: 0;
         text-align: center;
@@ -136,7 +134,7 @@ main {
 
         &-label {
             color: $color-2;
-            font-family: $plex;
+            font-family: $cerebri;
             font-size: 1rem;
             padding: 0 10px;
         }
@@ -219,8 +217,7 @@ main {
         }
 
         p {
-            font-family: $plex-condensed;
-            font-weight: 700;
+            font-family: $cerebri-bold;
             color: $color-4;
             font-size: .9rem;
             margin: 15px 0;
@@ -311,19 +308,16 @@ main {
     }
 
     &__label {
-        font-family: $plex-condensed;
-        font-weight: 700;
+        font-family: $cerebri-bold;
     }
 
     &__text {
-        font-family: $plex-condensed;
-        font-weight: 400;
+        font-family: $cerebri-medium;
     }
 
     a {
         color: $color-3;
-        font-family: $plex;
-        font-weight: 500;
+        font-family: $cerebri-medium;
         font-size: .9rem;
     }
 
@@ -334,9 +328,8 @@ main {
         padding: 20px 0 5px;
 
         p {
-            font-family: $plex;
+            font-family: $cerebri-medium;
             font-size: 1.5rem;
-            font-weight: 500;
             margin: 0;
         }
     }
@@ -374,9 +367,8 @@ main {
         p {
             margin: 0;
             color: $color-4;
-            font-family: $plex;
+            font-family: $cerebri-medium;
             font-size: 1rem;
-            font-weight: 500;
         }
     }
 
@@ -425,8 +417,7 @@ main {
         }
 
         p {
-            font-family: $plex;
-            font-weight: 500;
+            font-family: $cerebri-medium;
             margin: 0;
             padding: 20px 0;
         }
@@ -472,8 +463,7 @@ main {
         }
 
         p {
-            font-family: $plex;
-            font-weight: 500;
+            font-family: $cerebri-medium;
             margin: 0;
             padding: 20px 0;
         }
@@ -518,8 +508,7 @@ main {
         }
 
         p {
-            font-family: $plex;
-            font-weight: 500;
+            font-family: $cerebri-medium;
             margin: 0;
             padding: 20px 0;
         }
@@ -529,11 +518,10 @@ main {
 .vdp-features-toggle {
     grid-column: auto / span 24;
     padding: 10px 20px;
-    font-family: $plex;
+    font-family: $cerebri-medium;
     color: $color-3;
     border: solid 1px darken($color-5, 10%);
     border-radius: 10px;
-    font-weight: 500;
     text-align: center;
     margin-top: 30px;
     cursor: pointer;
@@ -543,7 +531,7 @@ main {
     grid-column: auto / span 24;
     padding: 40px;
     background: $color-5;
-    font-family: $plex;
+    font-family: $cerebri;
     line-height: 2;
     font-size: .9rem;
 

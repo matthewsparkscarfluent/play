@@ -59,9 +59,8 @@
             a {
                 text-decoration: none;
                 color: $color-1;
-                font-family: $plex;
+                font-family: $cerebri-medium;
                 font-size: 1rem;
-                font-weight: 500;
                 
                 @include tablet-wide-min {
                     font-size: 1.3rem; 
@@ -108,8 +107,7 @@
             text-transform: uppercase;
             text-align: center;
             z-index: 2;
-            font-family: $plex-condensed;
-            font-weight: 700;
+            font-family: $cerebri-bold;
             font-size: .7rem;
             letter-spacing: 1px;
             -webkit-transition: left 200ms ease-out;
@@ -153,9 +151,8 @@
             color: $color-2;
             transition: opacity 100ms;
             opacity: 1;
-            font-family: $plex-condensed;
+            font-family: $cerebri-bold;
             color: $color-1; 
-            font-weight: 700;
             font-size: .7rem;
             letter-spacing: 1px;
 

@@ -28,8 +28,7 @@
     padding: 5px 10px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    font-family: $plex-condensed;
-    font-weight: 700;
+    font-family: $cerebri-bold;
     text-transform: uppercase;
     text-align: center;
     color: $color-2;
@@ -71,9 +70,8 @@
 }
 
 &__headline {
-    font-family: $plex;
-    font-weight: 700;
-    text-align: left;
+    font-family: $cerebri-bold;
+    text-align: center;
     margin: 0;
     font-size: 1rem;
 }
@@ -81,12 +79,13 @@
 &__features {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 20px 0;
 }
 
 &__feature {
-    font-family: $plex;
+    font-family: $cerebri;
     padding: 0 20px 0 0;
     margin: 0 0 10px;
     font-size: .9rem;
