@@ -426,14 +426,14 @@ main {
 
 .vdp-features {
     grid-column: auto / span 24;
-    padding: 0 40px 40px;
+    padding: 40px;
 
     @include tablet-min {
-        padding: 0 40px 80px; 
+        padding: 80px 40px; 
     }
 
     @include tablet-wide-min {
-        padding: 0 80px 80px; 
+        padding: 80px; 
     }
 
     &__wrapper {
