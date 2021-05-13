@@ -1,5 +1,12 @@
 <div class="footer">
     <div class="footer__wrapper">
+        {% for class in page.page_class %}
+            {% if class.class == 'srp' %}
+            <div class="footer__disclaimer">
+                <p>Disclaimer: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nemo facere assumenda vero exercitationem commodi iste quibusdam quo! Corporis, consectetur fugit tempore ipsum expedita vel quod quibusdam eius vero dolore!</p>
+            </div>
+            {% endif %}
+        {% endfor %}
         <div class="footer__map">
             <iframe width="600" height="450" frameborder="0" style="border:0"
                 src="https://www.google.com/maps/embed/v1/place?q=place_id:EiVCdXNod2ljayBBdmUsIEJyb29rbHluLCBOWSAxMTIxMSwgVVNBIi4qLAoUChIJqzg4nhBcwokRQHs4SvAICN0SFAoSCb2xI5VXWcKJEeCmqTN1ghUc&key=AIzaSyDswRoHZuyW7x3cDmIEdq0t0Mq3mBAZRNU" allowfullscreen></iframe> 
@@ -43,6 +50,10 @@
                     <a href="#">214-214-2144</a>
                 </div>
             </div>
+        </div>
+        <div class="footer__brand">
+            <h5>Powereed by</h5>
+            <img src="/img/cf-logo.svg" alt="Carfluent">
         </div>
     </div>
 </div>
