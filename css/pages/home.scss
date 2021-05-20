@@ -23,7 +23,14 @@ main {
 
     @include tablet-min {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
+    }
+
+    &__back {
+
+        svg {
+            fill: $color-3;
+        }
     }
 
     &__headline {
@@ -31,10 +38,12 @@ main {
         font-size: 1.1rem;
         margin: 0;
         text-align: center;
+        padding: 10px 0 0;
 
         @include tablet-min {
             text-align: left;
             font-size: 1.5rem;
+            padding: 0 0 0 20px;
         }
 
         @include tablet-wide-min {
@@ -50,6 +59,7 @@ main {
 
         @include tablet-min {
             text-align: right;
+            margin-left: auto;
         }
     }
 }

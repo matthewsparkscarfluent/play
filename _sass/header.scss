@@ -1,7 +1,7 @@
 .header {
     display: flex;
     align-items: center;
-    padding: 10px 0 0;
+    padding: 10px 0;
     flex-wrap: wrap;
     
     @include phone-wide-min {
@@ -175,6 +175,35 @@
 
         }
 
+    }
+
+    &__breadcrumbs {
+        flex: 0 0 100%;
+        padding: 20px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-family: $cerebri;
+        text-transform: uppercase;
+        font-size: .7rem;
+        justify-content: center;
+
+        @include tablet-min {
+            justify-content: flex-start;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: $cerebri;
+            text-transform: uppercase;
+            font-size: .7rem;
+            padding-right: 2px;
+            color: $color-3;
+
+            &:hover, &:visited {
+                color: $color-3;
+            }
+        }
     }
     
 }
