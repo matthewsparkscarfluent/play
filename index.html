@@ -17,6 +17,14 @@ custom_js: srp
         <div class="srp__filters-container">
             <button data-fancybox class="btn btn--white btn--filter" href="#filters">Filtros</button>
         </div>
+        <div class="header__cta header__cta--toggle srp__search-toggle">
+            <label class="toggle">
+                <input type="checkbox">
+                <span data-unchecked="Espanol" data-checked="English"></span>
+                <div class="toggle-label">Espanol</div>
+                <div class="toggle-label">English</div>
+            </label>
+        </div>
     </div>
     <div class="srp__cards">
         {% for card in site.data.srp.cards %}

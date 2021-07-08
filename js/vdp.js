@@ -17,6 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        var headerHeight = $('.heading').outerHeight();
+        if (scroll >= headerHeight) {
+            $('body').addClass('heading--scroll');
+        } else {
+            $('body').removeClass('heading--scroll');
+        }
+    });
+
 
 lightbox.option({
     'resizeDuration': 200,
@@ -24,5 +34,9 @@ lightbox.option({
     'alwaysShowNavOnTouchDevices': true
 
 })
+
+
+  
+  
 
 

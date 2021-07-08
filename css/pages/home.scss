@@ -62,6 +62,35 @@ main {
             margin-left: auto;
         }
     }
+
+    &__toggle {
+        display: none;
+
+        .toggle {
+            border-radius: 0;
+            margin-top: 20px;
+            width: 100%;
+            
+            @include tablet-min {
+                border-radius: 10px;
+                margin-top: 0;
+                width: 200px;
+            }
+        }
+    }
+}
+
+body.heading--scroll {
+
+    .heading__toggle {
+        display: block;
+        min-width: 100%;
+
+        @include tablet-min {
+          min-width: 0;
+        }
+        
+    }
 }
 
 .vdp-top {

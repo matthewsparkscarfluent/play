@@ -8,6 +8,19 @@ main {
     @include grid;
 }
 
+body.heading--scroll {
+
+    .srp__search-toggle {
+        display: block;
+        min-width: 100%;
+
+        @include tablet-min {
+          min-width: 0;
+        }
+        
+    }
+}
+
 .srp {
     grid-column: auto / span 24;
 
@@ -16,6 +29,7 @@ main {
         background: $color-5;
         display: flex;
         position: sticky;
+        flex-wrap: wrap;
         top: 0;
         z-index: 2;
 
@@ -26,10 +40,27 @@ main {
         @include tablet-wide-min {
             padding: 40px 80px;
         }
+
+        &-toggle {
+            display: none;
+            margin: auto;
+    
+            .toggle {
+                border-radius: 0;
+                margin-top: 20px;
+                width: 100%;
+                
+                @include tablet-min {
+                    border-radius: 10px;
+                    margin-top: 0;
+                    width: 200px;
+                }
+            }
+        }
     }
 
     &__search-field {
-        flex: 0 0 70%;
+        flex: 0 0 60%;
         position: relative;
 
         @include phone-wide-min {
@@ -64,7 +95,7 @@ main {
     }
 
     &__filters-container {
-        flex: 0 0 30%;
+        flex: 0 0 40%;
         display: flex;
 
 
