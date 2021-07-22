@@ -12,9 +12,11 @@ main {
 .heading {
     grid-column: auto / span 24;
     background: $color-5;
-    padding: 30px 40px;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
     box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.18);
     z-index: 3;
@@ -22,28 +24,34 @@ main {
     top: 0;
 
     @include tablet-min {
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding: 30px 40px;
     }
 
     &__back {
 
         svg {
             fill: $color-3;
+            width: 24px;
+            height: 24px;
+
+            @include tablet-min {
+              width: 32px;
+              height: 32px;
+            }
+            
         }
     }
 
     &__headline {
         font-family: $cerebri-medium;
-        font-size: 1.1rem;
+        font-size: clamp(.7rem, 1.1vw, 1.1rem);
         margin: 0;
-        text-align: center;
-        padding: 10px 0 0;
+        text-align: left;
+        padding: 0 10px;
 
-        @include tablet-min {
-            text-align: left;
+        @include tablet-min {      
             font-size: 1.5rem;
-            padding: 0 0 0 20px;
         }
 
         @include tablet-wide-min {
@@ -53,7 +61,7 @@ main {
 
     &__price {
         font-family: $cerebri-medium;
-        font-size: 1.5rem;
+        font-size: clamp(.8rem, 2vw, 1.1rem);
         margin: 0;
         text-align: center;
 
